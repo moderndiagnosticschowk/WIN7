@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This Is FoR YoU</title>
+    <link rel="stylesheet" href="https://unpkg.com/7.css/dist/7.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
+      .window {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 300px;
+      }
+      .window-body {
+        background-image: url(0b41253a4041ddb57004d633e4979430.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 320px;
+      }
+     
+      .window-body p {
+        font-family: "Zeyada";
+        color: rgb(0, 0, 100);
+        font-size: 36px;
+        font-weight: 800;
+        text-align: center;
+        padding: 30px;
+        user-select: none;
+      }
+      .window .title-bar {
+        cursor: move;
+        user-select: none;
+      }
+
+      .minimized {
+        cursor: pointer;
+        display: none;
+      }
+
+      .maximized {
+        cursor: pointer;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+      }
+
+      .close {
+        cursor: pointer;
+      }
+      .close:hover {
+        color: red;
+      }
+
+      .minimize:hover {
+        color: red;
+      }
+
+      .rose {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        top: 10px;
+        animation: yidon 5s infinite;
+        transform: translateY(40%);
+      }
+
+      .petal {
+        width: 50px;
+        height: 50px;
+        background: #fe7696;
+        border-radius: 0px 50%;
+        position: absolute;
+        box-shadow: 0 0 10px #d1123f;
+        z-index: 2;
+        transform-origin: bottom right;
+        animation: zhankai2 10s infinite;
+      }
+
+      .petal:nth-child(2) {
+        transform-origin: right bottom;
+        transform: rotate(90deg);
+        background: #fe7696;
+        left: -10px;
+        animation: zhankai1 10s infinite;
+      }
+
+      .petal:nth-child(3) {
+        width: 40px;
+        height: 40px;
+        left: 10px;
+        top: -20px;
+        z-index: 1;
+        background: #f03a64;
+        transform-origin: bottom right;
+        animation: zhankai2 10s infinite;
+      }
+
+      .petal:nth-child(4) {
+        transform: rotate(90deg);
+        width: 40px;
+        height: 40px;
+        left: 0px;
+        top: -20px;
+        z-index: 1;
+        background: #f03a64;
+        transform-origin: bottom right;
+        animation: zhankai1 10s infinite;
+      }
+
+      .petal:nth-child(5) {
+        width: 50px;
+        height: 50px;
+        border-radius: 20px;
+        left: 20px;
+        top: -30px;
+        z-index: 0;
+        background: #d1123f;
+      }
+
+      .leaf {
+        position: absolute;
+        top: 120px;
+        left: -115px;
+      }
+
+      .stem {
+        width: 240px;
+        height: 40px;
+        background: transparent;
+        border: 8px solid #8ac78a;
+        border-color: #77a377 transparent transparent transparent;
+        border-radius: 50% 50%;
+        transform: rotate(100deg);
+      }
+
+      .leafs {
+        width: 50px;
+        height: 40px;
+        border-radius: 0px 50%;
+        background: #77a377;
+        position: absolute;
+        top: 0;
+        left: 100px;
+        z-index: 49;
+      }
+
+      .leafs:nth-child(2) {
+        width: 40px;
+        height: 20px;
+        top: 40px;
+        left: 140px;
+        transform: rotate(120deg);
+      }
+
+      @keyframes yidon {
+        50% {
+          transform: translateY(35%);
+        }
+        100% {
+          transform: translateY(40%);
+        }
+      }
+
+      @keyframes zhankai1 {
+        50% {
+          transform: rotate(110deg);
+        }
+        100% {
+          transform: rotate(90deg);
+        }
+      }
+
+      @keyframes zhankai2 {
+        50% {
+          transform: rotate(-20deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="window" id="window1" style="transform: rotateZ(-5deg)">
+      <div class="title-bar">
+        <div class="title-bar-text">Window 1</div>
+        <div class="title-bar-controls">
+          <button class="minimize" aria-label="Minimize"></button>
+          <button class="maximize" aria-label="Maximize"></button>
+          <button class="close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>RODE</p>
+        <div class="rose">
+          <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+          </div>
+          <div class="leaf">
+            <div class="stem"></div>
+            <div class="leafs"></div>
+            <div class="leafs"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="window" id="window2">
+      <div class="title-bar">
+        <div class="title-bar-text">Window 2</div>
+        <div class="title-bar-controls">
+          <button class="minimize" aria-label="Minimize"></button>
+          <button class="maximize" aria-label="Maximize"></button>
+          <button class="close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>and now I need directions to your heart.</p>
+      </div>
+    </div>
+    <div class="window" id="window3" style="transform: rotateZ(-5deg)">
+      <div class="title-bar">
+        <div class="title-bar-text">Window 3</div>
+        <div class="title-bar-controls">
+          <button class="minimize" aria-label="Minimize"></button>
+          <button class="maximize" aria-label="Maximize"></button>
+          <button class="close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>Because I just got lost in your eyes… .</p>
+      </div>
+    </div>
+    <div class="window" id="window4">
+      <div class="title-bar">
+        <div class="title-bar-text">Window 4</div>
+        <div class="title-bar-controls">
+          <button class="minimize" aria-label="Minimize"></button>
+          <button class="maximize" aria-label="Maximize"></button>
+          <button class="close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>Do you have a map?</p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const windows = document.querySelectorAll(".window");
+        windows.forEach((window) => {
+          let isDragging = false;
+          let offsetX, offsetY;
+          let isMaximized = false;
+          const originalSize = {
+            width: window.style.width,
+            height: window.style.height,
+          };
+          const titleBar = window.querySelector(".title-bar");
+          const minimizeBtn = window.querySelector(".minimize");
+          const maximizeBtn = window.querySelector(".maximize");
+          const closeBtn = window.querySelector(".close");
+          // Drag functionality
+          titleBar.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            offsetX = e.clientX - window.offsetLeft;
+            offsetY = e.clientY - window.offsetTop;
+            window.style.zIndex = 1000; // Bring the window to the front
+          });
+          document.addEventListener("mousemove", (e) => {
+            if (isDragging && !isMaximized) {
+              window.style.left = `${e.clientX - offsetX}px`;
+              window.style.top = `${e.clientY - offsetY}px`;
+            }
+          });
+          document.addEventListener("mouseup", () => {
+            isDragging = false;
+          });
+          // Minimize functionality
+          minimizeBtn.addEventListener("click", () => {
+            window.classList.toggle("minimized");
+          });
+          // Maximize/restore functionality
+          maximizeBtn.addEventListener("click", () => {
+            if (isMaximized) {
+              window.classList.remove("maximized");
+              window.style.width = originalSize.width;
+              window.style.height = originalSize.height;
+            } else {
+              window.classList.add("maximized");
+            }
+            isMaximized = !isMaximized;
+          });
+          // Close functionality
+          closeBtn.addEventListener("click", () => {
+            window.style.display = "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
